@@ -1,28 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>gavt.me</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-font-family: system-ui;
-max-width:700px;
-margin:80px auto;
-padding:20px;
-line-height:1.6;
-}
-h1{font-size:40px;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gavin | gavt.me</title>
+  <meta name="description" content="Personal site for Gavin" />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --panel: #121722;
+      --text: #e8ecf3;
+      --muted: #9aa4b2;
+      --line: #202634;
+      --accent: #ffffff;
+      --max: 920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0 40px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      padding: 48px 0 28px;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .sub {
+      font-size: clamp(18px, 3vw, 22px);
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .list li + li {
+      margin-top: 8px;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (min-width: 780px) {
+      .card.span-7 { grid-column: span 7; }
+      .card.span-5 { grid-column: span 5; }
+      .card.span-4 { grid-column: span 4; }
+      .card.span-8 { grid-column: span 8; }
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand">gavt.me</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="mailto:gavin@gavt.me">Contact</a>
+      </div>
+    </nav>
 
-<h1>gavt.me</h1>
+    <section class="hero">
+      <div class="eyebrow">Founder • Builder • Beekeeper</div>
+      <h1>Building complex software products to make cutting-edge technology mundane.</h1>
+      <p class="sub">
+        I’m Gavin. I revel in working with top tier teams to build software from scratch that turns difficult technical problems into a new reality.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:gavin@gavt.me">Email me</a>
+        <a class="btn" href="#work">See what I’m working on</a>
+      </div>
+    </section>
 
-<p>Hello, I'm Gavin.</p>
+    <section class="grid" id="about">
+      <article class="card span-7">
+        <h2>About</h2>
+        <p class="muted">
+          I’ve spent my career building innovative solutions across traditional finance and Web3. Low friction adoption by real users and developers is at the core of my work.
+        </p>
+      </article>
 
-<p>This site is coming soon.</p>
+      <article class="card span-5">
+        <h2>Focus</h2>
+        <ul class="list muted">
+          <li>Protocols and privacy</li>
+          <li>Decentralised infrastructure</li>
+          <li>Go to market thinking for technical products</li>
+          <li>Founding and scaling early stage teams</li>
+        </ul>
+      </article>
 
-<p>Email: gavin@gavt.me</p>
+      <article class="card span-4" id="work">
+        <h2>Now</h2>
+        <p class="muted">
+          Working on new infrastructure and product ideas with a focus on practical utility.
+        </p>
+      </article>
 
+      <article class="card span-8">
+        <h2>Selected themes</h2>
+        <ul class="list muted">
+          <li>How to make advanced infrastructure usable by normal businesses</li>
+          <li>How incentives shape protocol adoption</li>
+          <li>How to simplify complex systems without losing capability</li>
+        </ul>
+      </article>
+
+      <article class="card span-12">
+        <h2>Contact</h2>
+        <p class="muted">
+          The best way to reach me is by email at
+          <a href="mailto:gavin@gavt.me">gavin@gavt.me</a>.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      © 2026 Gavin
+    </footer>
+  </div>
 </body>
 </html>
